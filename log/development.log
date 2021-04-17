@@ -1,0 +1,34 @@
+Started GET "/" for 188.163.53.71 at 2021-04-16 15:55:12 +0000
+Cannot render console from 10.3.0.168! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.7ms | Allocations: 473)
+Completed 200 OK in 30ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 2989)
+
+
+Started GET "/" for 188.163.53.71 at 2021-04-16 15:55:56 +0000
+Cannot render console from 10.3.0.168! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.8ms | Allocations: 185)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 1029)
+
+
+Started GET "/" for 185.147.15.58 at 2021-04-17 06:16:18 +0000
+Cannot render console from 10.3.0.168! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 82.4ms | Allocations: 308)
+Completed 200 OK in 105ms (Views: 89.0ms | ActiveRecord: 0.0ms | Allocations: 1964)
+
+
+Started GET "/" for 185.147.15.58 at 2021-04-17 06:16:59 +0000
+Cannot render console from 10.3.0.168! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 20.2ms | Allocations: 190)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 1023)
+
+
