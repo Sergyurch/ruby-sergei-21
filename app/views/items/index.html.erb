@@ -1,0 +1,72 @@
+<h1>Каталог товаров</h1>
+
+<%= form_with model: @item, method: :get, class: 'search-form' do |form| %>
+	<%= form.text_field :text %>
+	<%= form.submit 'Найти товар' %>
+<% end %>
+
+<table>
+	<thead>
+		<th>Название</th>
+		<th>Описание</th>
+		<th>Цена</th>
+		<th></th>
+	</thead>
+	<tbody>
+		<% @items.each do |item| %>
+			<tr>
+				<td><%= item.name %></td>
+				<td><%= item.description %></td>
+				<td><%= item.price %></td>
+				<td>
+					
+						<input type="hidden" name="itemId" value="<%= item.id %>">
+						<input type="hidden" name="name" value="<%= item.name %>">
+						<input type="hidden" name="description" value="<%= item.description %>">
+						<input type="hidden" name="price" value="<%= item.price %>">
+						<input type="number" class="quantity" name="quantity" min="1" step="1" value="1"><span>шт.</span>
+						<button class="btn-add">Добавить в корзину</button>
+					
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+<%= will_paginate @items %>
+
+<script>
+	let addButtons = document.querySelectorAll(".btn-add");
+	//sessionStorage.setItem( 'cart', JSON.stringify([]) );
+	//let cart = JSON.parse( sessionStorage.getItem('cart') );
+	let cart = [];
+	addButtons.forEach(function (button) {
+		button.addEventListener('click', function () {
+			let itemId = button.parentElement.querySelector('[name=itemId]').getAttribute('value');
+			let itemName = button.parentElement.querySelector('[name=name]').getAttribute('value');
+			let itemDescription = button.parentElement.querySelector('[name=description]').getAttribute('value');
+			let itemPrice = parseFloat( button.parentElement.querySelector('[name=price]').getAttribute('value') ).toFixed(2);
+			let itemQuantity = parseInt( button.parentElement.querySelector('[name=quantity]').value );
+			let item = {itemId: itemId, itemName: itemName, itemDescription: itemDescription, itemPrice: itemPrice, itemQuantity: itemQuantity};
+			let itemExists = false;
+			
+			for (let i = 0; i<cart.length; i++) {
+				if ( cart[i].itemId == itemId ) {
+					console.log('sfsd');
+					itemExists = true;
+					cart[i].itemQuantity += itemQuantity;
+					break;
+				}
+			}
+			
+			if (itemExists) {
+				itemExists = false;
+			} else {
+				cart.push(item);
+			}
+			
+			sessionStorage.setItem( 'cart', JSON.stringify(cart) );
+			console.log(cart);
+			console.log(sessionStorage.getItem('cart'));
+		});
+	});
+</script>

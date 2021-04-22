@@ -1,0 +1,49 @@
+// Place all the styles related to the Items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+h1 {
+	text-align: center;
+}
+
+.search-form {
+	text-align: center;
+}
+
+.quantity {
+	display: inline-block;
+	width: 60px;
+	margin-right: 5px;
+}
+
+table {
+    border-collapse: collapse;
+	margin: auto;
+	margin-top: 20px;
+}
+
+thead {
+	background-color: lightblue;
+	border-top: 1px solid black;
+}
+
+tr {
+	border-bottom: 1px solid black;
+}
+
+tr:hover {
+	background-color: lightblue;
+}
+
+th, td {
+	padding: 10px 20px;
+}
+
+.btn-add {
+	margin-left: 20px;
+}
+
+.pagination {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}

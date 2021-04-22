@@ -13,3 +13,97 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+	box-sizing: border-box;	
+}
+
+body {
+	margin: 0;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 150px;
+	padding: 20px;
+}
+
+.shop-title {
+	font-size: 48px;
+}
+
+.login-form {
+	text-align: right;
+	align-self: flex-start;
+}
+
+.logo-container, .logo-link {
+	height: 100%;
+}
+
+.logo-img {
+	max-height: 100%;
+}
+
+.form-section {
+	margin-bottom: 5px;
+}
+
+main {
+	min-height: calc(100vh - 300px);
+}
+
+footer {
+	height: 150px;
+	padding: 20px;
+	border-top: 2px solid grey;
+	font-size: 48px;
+	text-align: center;
+}
+
+.menu {
+	height: 60px;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	border-bottom: 2px solid grey;
+	border-top: 2px solid grey;
+	background-color: lightblue;
+}
+
+.menu a {
+	text-decoration: none;
+	color: black;
+}
+
+.menu a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.menu-items {
+	margin: 0;
+	padding: 0;
+}
+
+.menu-item {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.cart, .cart-link, .cart-img {
+	height: 100%;
+}
+
+.cart-link {
+	display: flex;
+	align-items: center;
+}
+
+.cart-img {
+	margin-left: 5px;
+}

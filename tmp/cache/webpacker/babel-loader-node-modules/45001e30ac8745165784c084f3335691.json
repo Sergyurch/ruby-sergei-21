@@ -1,0 +1,1 @@
+{"ast":null,"code":"//let addButtons = document.querySelectorAll(\".btn-add\");\n//console.log(addButtons.length);","map":{"version":3,"sources":["/workspace/Ruby/app/javascript/itemsIndex.js"],"names":[],"mappings":"AAAA;AACA","sourcesContent":["//let addButtons = document.querySelectorAll(\".btn-add\");\n//console.log(addButtons.length);"]},"metadata":{},"sourceType":"module"}

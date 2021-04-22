@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GoormRailsApp</title>
+    <title>Интернет-магазин</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,51 @@
   </head>
 
   <body>
-    <%= yield %>
+	<header>
+		<div class="logo-container">
+			<a href="/" class="logo-link">
+				<img src="/images/logo.png" alt="logo" class="logo-img">
+			</a>
+		</div>
+		<div class="shop-title">Интернет-магазин</div>
+		<div class="login-form">
+			<%= form_with model: @user do |form| %>
+				<div class="form-section">
+					<%= form.label :email, 'E-mail' %>
+					<%= form.email_field :email %>
+				</div>
+				<div class="form-section">
+					<%= form.label :password, 'Пароль'%>
+					<%= form.password_field :password %>
+				</div>
+				<div class="form-section">
+					<%= form.submit 'Войти' %>
+				</div>
+			<% end %>
+		</div>
+	</header>
+	<main>
+		<div class="menu">
+			<nav>
+				<ul class="menu-items">
+					<li class="menu-item"><a href="/">Главная</a></li>
+					<li class="menu-item"><a href="#">О нас</a></li>
+					<li class="menu-item"><a href="#">Контакты</a></li>
+					<li class="menu-item"><a href="#">Доставка</a></li>
+				</ul>
+			</nav>
+			<div class="cart">
+				<a href="#" class="cart-link">
+					<span>Корзина</span>
+					<img src="/images/cart.png" alt="cart" class="cart-img">
+				</a>
+			</div>
+		</div>
+		
+	    <%= yield %>
+	</main>
+    <footer>
+		<div>Футер</div>
+	</footer>
   </body>
 </html>
